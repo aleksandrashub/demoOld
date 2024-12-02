@@ -1,0 +1,144 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="demo2811.AddZayavka"
+        Title="AddZayavka">
+ <Grid
+	 ColumnDefinitions="180,200,350">
+	 <StackPanel
+		 Grid.Column="0">
+		 <Button
+			 Content="Выйти"
+			 Click="vyhod_Click">
+			 </Button>
+		 <TextBlock
+			 Text="Срок действия заявки:">
+			 </TextBlock>
+		 <StackPanel
+			 Orientation="Horizontal">
+			 <TextBlock
+				 Text="С:">
+				 </TextBlock>
+		 <DatePicker
+			 
+			 Name="nachD">
+			 </DatePicker>
+			 <TextBlock
+				 Text=" по:">
+			 </TextBlock>
+			 <DatePicker
+				 Name="endD">
+			 </DatePicker>
+		 </StackPanel>
+		 <TextBlock
+			 Text="Цель посещения">
+			 </TextBlock>
+		 <ComboBox
+			 Name="aimCB">
+			 </ComboBox>
+		 <TextBlock
+			 Text="Принимающая сторона:">
+			 </TextBlock>
+		 <ComboBox
+			 Name="podrCB">
+			 </ComboBox>
+		 <TextBlock
+			 Text="ФИО">
+			 </TextBlock>
+		 <ComboBox
+			Name="sotrCB">
+		 </ComboBox>
+		 
+	 </StackPanel>
+	 <StackPanel
+		 Name="infPos"
+		 Margin="0,100,0,0"
+		 Grid.Column="1">
+		 <TextBlock
+			 Text="Информация о посетителе">
+			 </TextBlock>
+		 <TextBlock
+			 Text="Фамилия">
+			 </TextBlock>
+		 <TextBox
+			 Name="surn">
+			</TextBox>
+		 <TextBlock
+			Text="Имя">
+		 </TextBlock>
+		 <TextBox
+			 Name="name">
+		 </TextBox>
+		 <TextBlock
+			Text="Отчество">
+		 </TextBlock>
+		 <TextBox
+			 Name="otch">
+		 </TextBox>
+		 <TextBlock
+			  Text="Телефон">
+		 </TextBlock>
+		 <MaskedTextBox
+			 Name="phoneMask"
+			 Mask="+7(000)000-00-00">
+		 </MaskedTextBox>
+		 <TextBlock
+			 Text="E-mail">
+		 </TextBlock>
+		 <TextBox
+			 Name="mailUs">
+		 </TextBox>
+		 <Button
+			 Content="Добавить посетителя">
+			 </Button>
+		 </StackPanel>
+	<StackPanel
+	 Margin="10,117,0,0"
+	 Grid.Column="2">
+		<TextBlock
+			
+				Text="Примечание">
+		</TextBlock>
+		<TextBox
+			HorizontalAlignment="Left"
+			Width="200"
+			Name="primechanieInp">
+		</TextBox>
+		<TextBlock
+			 Text="Организация">
+		</TextBlock>
+		<TextBox
+			HorizontalAlignment="Left"
+			Width="200"
+			Name="orgInp">
+		</TextBox>
+		<TextBlock
+			 Text="Укажите дату рождения">
+		</TextBlock>
+		<DatePicker
+			Name="birthDP">
+		</DatePicker>
+		<TextBlock
+			 Text="Серия и номер паспорта">
+		</TextBlock>
+		<StackPanel
+			Orientation="Horizontal">
+			<MaskedTextBox
+				Name="seriaMask"
+				Mask="0000">
+			</MaskedTextBox>
+			<MaskedTextBox
+				Name="nomerMask"
+		   Mask="000000">
+			</MaskedTextBox>
+			</StackPanel>
+		<Button
+			Click="Ok_Click"
+			Content="Оформить заявку">
+		</Button>
+		</StackPanel>
+	
+ </Grid>
+</Window>
